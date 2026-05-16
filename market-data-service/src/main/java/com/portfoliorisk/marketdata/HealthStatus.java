@@ -1,4 +1,4 @@
-package com;
+package com.portfoliorisk.marketdata;
 
 public enum HealthStatus {
   UP,
