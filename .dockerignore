@@ -1,0 +1,55 @@
+# Docker build context ignore for PortfolioRisk
+
+# Exclude Maven build output
+target/
+**/target/
+
+# Keep the Maven wrapper jar (Dockerfile may rely on it)
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE and editor files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Git metadata
+.git/
+
+# Node / frontend
+frontend/node_modules/
+**/node_modules/
+frontend/dist/
+
+# Logs, tmp, test output
+*.log
+logs/
+tmp/
+test-output/
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets and environment files
+.env
+*.env
+secrets.yml
+
+# Build artifacts
+*.class
+*.jar
+*.war
+*.ear
+dist/
+out/
+
+# Docker / compose local override files
+docker-compose.override.yml
+docker-compose.*.local.yml
+
+# Ignore the dockerignore itself from being copied (not required but tidy)
+.dockerignore
+

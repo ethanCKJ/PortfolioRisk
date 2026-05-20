@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: portfoliorisk
+      POSTGRES_USER: portfoliorisk
+      POSTGRES_PASSWORD: portfoliorisk
+  market-data-service:
+     build:
+       context: .
+       dockerfile: market-data-service/Dockerfile
+     ports:
+        - "8080:8080"
+     depends_on:
+        - postgres
+

@@ -36,5 +36,6 @@
           <artifactId>spring-boot-maven-plugin</artifactId>
         </plugin>
       </plugins>
+    <finalName>market-data-service</finalName>
   </build>
 </project>

@@ -38,3 +38,35 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Node / Frontend ###
+# Angular / npm
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.angular/
+
+### Logs and runtime ###
+*.log
+/logs/
+*.tmp
+tmp/
+
+### Secrets & config ###
+# Environment files
+.env
+*.env
+
+### Docker / local infra ###
+# ignore compose override files that are local-only
+docker-compose.override.yml
+
+### Test / coverage ###
+/coverage/
+test-output/
+
+### Other ###
+# IDE project files, local archives
+.idea_modules/
+
+# End of .gitignore
+
