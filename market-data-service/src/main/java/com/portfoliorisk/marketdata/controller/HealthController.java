@@ -12,6 +12,6 @@ public class HealthController {
   @GetMapping("/health")
   public ResponseEntity<HealthResponse> getHealth(){
     HealthResponse healthResponse = new HealthResponse(HealthStatus.UP, "market-data-service");
-    return new ResponseEntity<>(healthResponse, HttpStatus.OK);
+    return new ResponseEntity<>(healthResponse, HttpStatus.OK)
   }
 }
