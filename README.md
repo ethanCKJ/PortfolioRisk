@@ -1,4 +1,5 @@
 # PortfolioRisk
+[![CI](https://github.com/ethanCKJ/PortfolioRisk/actions/workflows/ci.yml/badge.svg)](https://github.com/ethanCKJ/PortfolioRisk/actions/workflows/ci.yml)
 
 ## What this does?
 
