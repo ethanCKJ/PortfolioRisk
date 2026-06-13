@@ -5,9 +5,9 @@ WORKDIR /app
 COPY pom.xml pom.xml
 COPY market-data-service/pom.xml market-data-service/pom.xml
 # Build .jar from source code
-RUN mvn -f pom.xml dependency:go-offline -B
+RUN  --mount=type=cache,target=/root/.m2 mvn -f pom.xml dependency:go-offline -B
 COPY market-data-service/src market-data-service/src
-RUN mvn -f market-data-service/pom.xml package -DskipTests -B
+RUN --mount=type=cache,target=/root/.m2 mvn -f market-data-service/pom.xml package -DskipTests -B
 
 FROM eclipse-temurin:21-jre AS runtime
 WORKDIR /app

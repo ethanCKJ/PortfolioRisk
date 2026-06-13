@@ -1,3 +1,10 @@
 spring:
   application:
     name: market-data-service
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:postgres}:5432/portfoliorisk
+    username: ${DB_USERNAME:portfoliorisk}
+    password: ${DB_PASSWORD:portfoliorisk}
+  jpa:
+    hibernate:
+      ddl-auto: validate
